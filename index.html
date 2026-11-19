@@ -302,4 +302,179 @@
 
         .hobby-card:hover {
             transform: translateY(-3px);
-            border-color: rgba(52, 211, 153,
+            border-color: rgba(52, 211, 153, 0.45);
+        }
+
+        .hobby-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+        }
+
+        .hobby-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.45rem;
+            color: var(--text-primary);
+        }
+
+        .hobby-card p {
+            color: var(--text-muted);
+            font-size: 0.96rem;
+        }
+
+        .champion-box {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.75rem;
+            border-radius: 16px;
+            background: linear-gradient(125deg, rgba(251, 191, 36, 0.16), rgba(56, 189, 248, 0.08) 60%, rgba(7, 11, 20, 0.65));
+            border: 1px solid var(--border-gold);
+            box-shadow: 0 12px 32px rgba(251, 191, 36, 0.08);
+        }
+
+        .trophy-circle {
+            flex-shrink: 0;
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
+            background: rgba(251, 191, 36, 0.16);
+            border: 1px solid var(--border-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.3rem;
+        }
+
+        .champion-box h3 {
+            font-size: 1.35rem;
+            color: var(--gold);
+            margin-bottom: 0.35rem;
+        }
+
+        .champion-box p {
+            color: var(--text-secondary);
+            font-size: 0.98rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1.5rem 3rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-subtle);
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 680px) {
+            .stats-strip {
+                grid-template-columns: 1fr;
+            }
+
+            .champion-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links {
+                gap: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="#" class="brand">
+                <span class="brand-dot"></span>
+                <span>Асыл Жандарбеков</span>
+            </a>
+            <div class="nav-links">
+                <a href="#profile">Профиль</a>
+                <a href="#hobbies">Хобби</a>
+                <a href="#achievements">Жетістік</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="badge">🏆 Лига Чемпионы</div>
+        <div class="avatar-wrap">
+            <div class="avatar">
+                <div class="avatar-inner">ЖА</div>
+            </div>
+        </div>
+        <h1>Жандарбеков Асыл</h1>
+        <p class="hero-subtitle">
+            Жеңіске деген жігер мен шығармашылық шабытты қатар ұстанатын тұлға. Футбол алаңындағы табандылық пен ән әлеміндегі үйлесім — менің өмірлік стилім.
+        </p>
+        <div class="cta-row">
+            <a href="#achievements" class="btn btn-primary">🏆 Жетістігімді көру</a>
+            <a href="#hobbies" class="btn btn-secondary">⚽ Хоббилерім</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="profile" class="card">
+            <div class="section-header">
+                <h2 class="section-title">👤 Профиль</h2>
+            </div>
+            <p class="profile-text">
+                Сәлем! Мен — <strong>Жандарбеков Асыл</strong>. Алға қойған мақсатқа соңына дейін ұмтылу, командамен бірге нәтиже шығару және музыка арқылы көңіл күй сыйлау маған ерекше қуаныш береді.
+            </p>
+            <div class="stats-strip">
+                <div class="stat-box">
+                    <div class="stat-value">Чемпион</div>
+                    <div class="stat-label">Лига мәртебесі</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">Футбол</div>
+                    <div class="stat-label">Сүйікті спорт</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">Ән айту</div>
+                    <div class="stat-label">Шығармашылық хобби</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies" class="card">
+            <div class="section-header">
+                <h2 class="section-title">✨ Хоббиім</h2>
+            </div>
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <span class="hobby-icon">⚽</span>
+                    <h3>Футбол</h3>
+                    <p>Жылдамдық, тактика, мінез және нағыз командалық рух — футбол маған қуат пен сергектік береді.</p>
+                </div>
+                <div class="hobby-card">
+                    <span class="hobby-icon">🎤</span>
+                    <h3>Ән айту</h3>
+                    <p>Әуен мен сөз арқылы жүректегі эмоцияны жеткізу және жаңа композицияларды орындау — сүйікті мекенім.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="card">
+            <div class="section-header">
+                <h2 class="section-title">🏅 Жетістіктерім</h2>
+            </div>
+            <div class="champion-box">
+                <div class="trophy-circle">🏆</div>
+                <div>
+                    <h3>Лига Чемпионы</h3>
+                    <p>Жоғары бәсеке мен тынымсыз еңбектің нәтижесінде Лига чемпионы атағын жеңіп алдым. Бұл жеңіс — тәртіп пен өзіме деген сенімнің айғағы.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Жандарбеков Асыл • Жеке портфолио сайты
+    </footer>
+
+</body>
+</html>
